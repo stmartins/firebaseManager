@@ -3,9 +3,8 @@ package main
 import (
 	"context"
 	firebase "firebase.google.com/go/v4"
-	"github.com/gin-gonic/gin"
 	"log"
-	"net/http"
+	"tests/server"
 )
 
 const (
@@ -41,13 +40,5 @@ func init() {
 }
 
 func main() {
-	router := gin.Default()
-	router.LoadHTMLGlob("index.html")
-	//router.LoadHTMLFiles("templates/template1.html", "templates/template2.html")
-	router.GET("/index", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": "Vincent",
-		})
-	})
-	router.Run(":8080")
+	server.Start()
 }
