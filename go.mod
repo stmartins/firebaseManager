@@ -4,7 +4,6 @@ go 1.16
 
 require (
 	cloud.google.com/go v0.94.1 // indirect
-	cloud.google.com/go/firestore v1.5.0
 	firebase.google.com/go/v4 v4.6.0
 	github.com/gin-gonic/gin v1.7.4
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
